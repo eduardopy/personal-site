@@ -1,3 +1,12 @@
 screenshots/
 .DS_Store
 .claude/
+
+# Personal notes — never publish to the repo
+BRAIN.md
+EXPLORATION.md
+
+# Working notes — keep out of the public repo (only README is public)
+HANDOFF.md
+POSITIONING.md
+POSITIONING_NOTES.md

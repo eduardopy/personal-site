@@ -453,6 +453,62 @@ h1 em::after {
   font-weight: 700;
 }
 
+/* ============== Before code ============== */
+.proof-section {
+  border-top: 1px solid var(--line);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.proof-card {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.proof-card h3 {
+  margin-top: auto;
+  font-size: 1.42rem;
+  line-height: 1.12;
+}
+
+.proof-card p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.98rem;
+  line-height: 1.64;
+}
+
+.thesis-panel {
+  margin-top: 22px;
+  padding: 34px;
+  border: 1px solid rgba(31, 61, 47, 0.16);
+  border-radius: var(--radius-md);
+  color: var(--paper-strong);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(241, 195, 108, 0.16), transparent 42%),
+    linear-gradient(135deg, #131613 0%, #1f3d2f 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.thesis-panel p {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.024em;
+}
+
 /* ============== Work ============== */
 .work-section {
   border-top: 1px solid var(--line);
@@ -460,7 +516,7 @@ h1 em::after {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
@@ -608,6 +664,95 @@ h1 em::after {
 .project-card.accent .project-outcome {
   border-color: rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brick);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: gap 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  gap: 9px;
+  color: var(--brick-deep);
+  outline: none;
+}
+
+.project-link.strong {
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: var(--paper-strong);
+  background: var(--brick);
+  box-shadow: 0 6px 18px rgba(170, 75, 54, 0.34);
+}
+
+.project-link.strong:hover,
+.project-link.strong:focus-visible {
+  color: var(--paper-strong);
+  background: var(--brick-deep);
+}
+
+.project-card.accent .project-link {
+  color: var(--gold-soft);
+}
+
+.project-card.accent .project-link:hover,
+.project-card.accent .project-link:focus-visible {
+  color: #ffd98a;
+}
+
+/* Featured case-file card spans the full grid width */
+.project-card.featured {
+  grid-column: 1 / -1;
+}
+
+.featured-body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px 48px;
+}
+
+.featured-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.featured-col .project-bullets {
+  margin-top: 4px;
+}
+
+.featured-col .project-outcome {
+  margin-top: auto !important;
+}
+
+.project-tag-featured {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border: 1px solid rgba(241, 195, 108, 0.4);
+  border-radius: 999px;
+  color: var(--gold-soft);
+  background: rgba(241, 195, 108, 0.1);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* ============== Approach (How I work) ============== */
@@ -852,10 +997,12 @@ h1 em::after {
   }
 
   .section-heading,
+  .proof-grid,
   .project-grid,
   .approach-list,
   .about-section,
-  .numbers-strip {
+  .numbers-strip,
+  .featured-body {
     grid-template-columns: 1fr;
   }
 
@@ -900,6 +1047,15 @@ h1 em::after {
     padding-top: 200px;
   }
 
+  .nav-links a {
+    padding: 7px 6px;
+    font-size: 0.78rem;
+  }
+
+  .nav-cta {
+    padding: 7px 8px !important;
+  }
+
   .hero-actions,
   .contact-actions {
     width: 100%;
@@ -910,6 +1066,7 @@ h1 em::after {
   }
 
   .project-card,
+  .proof-card,
   .approach-list li {
     padding: 24px;
   }

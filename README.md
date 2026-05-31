@@ -1,19 +1,29 @@
-# Eduardo Personal Site
+# Eduardo — personal site
 
-A lightweight one-page developer portfolio built with plain HTML, CSS, and a tiny bit of JavaScript.
+A one-page portfolio built with plain HTML, CSS, and a small amount of vanilla JavaScript. No build step, no framework, no dependencies.
 
-## Run Locally
+Positioned as a credibility artifact for client / warm-network work: software engineering with a sharp edge in healthcare and operational data, shown as case files rather than a capability list. See `POSITIONING.md` for direction and `HANDOFF.md` for current state and next steps.
 
-Open `index.html` in a browser, or run a static server from this folder:
+## Run locally
 
 ```bash
 python3 -m http.server 5173
 ```
 
-Then visit `http://localhost:5173`.
+Then open <http://localhost:5173>.
 
-## Customize
+## Structure
 
-- Edit the name, bio, project copy, email, and GitHub link in `index.html`.
-- Tune colors and layout in `styles.css`.
-- Replace the hero image at `assets/hero-workspace.png` with your own photo or generated asset.
+```
+index.html              One page: hero, work (case files), approach, about, contact
+styles.css              Design tokens + section styles
+script.js               Header scroll, smooth scroll, marquee loop, scroll reveal
+case-tuya-analytics.html  Long-form case file (in progress)
+POSITIONING.md          Direction + locked decisions
+HANDOFF.md              Practical working notes
+```
+
+## Edit
+
+- Copy, projects, and links live in `index.html`.
+- Colors, type, and layout in `styles.css` (tokens at the top).
