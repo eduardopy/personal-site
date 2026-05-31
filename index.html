@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eduardo is a software developer building thoughtful web products, resilient systems, and clean user experiences."
+    />
+    <title>Eduardo | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Eduardo home">
+        <span class="brand-mark">E</span>
+        <span>Eduardo</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#proof">Proof</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Software Developer</p>
+          <h1 id="hero-title">Eduardo</h1>
+          <p class="hero-copy">
+            I build product systems that feel calm on the surface and smart
+            underneath: interfaces, APIs, automations, and the connective tissue
+            that helps teams move faster.
+          </p>
+          <div class="hero-signals" aria-label="Core strengths">
+            <span><strong>01</strong> Interface craft</span>
+            <span><strong>02</strong> System judgment</span>
+            <span><strong>03</strong> Shipping rhythm</span>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#proof">
+              <span>Open the Lab</span>
+              <span aria-hidden="true">&#8600;</span>
+            </a>
+            <a class="button secondary" href="mailto:hello@eduardo.dev">
+              <span>Email Me</span>
+              <span aria-hidden="true">&#9993;</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-status" aria-label="Availability">
+          <span class="status-dot" aria-hidden="true"></span>
+          Available for product builds and freelance work
+        </aside>
+      </section>
+
+      <section class="intro-strip" aria-label="Developer focus areas">
+        <p>Prototype fast</p>
+        <p>Stabilize deeply</p>
+        <p>Polish deliberately</p>
+      </section>
+
+      <section class="playground-lab" id="proof" aria-labelledby="proof-title">
+        <div class="playground-head">
+          <p class="eyebrow">Interactive Lab</p>
+          <h2 id="proof-title">A few small things that are simply fun to use.</h2>
+          <p>
+            Less case study, more craft. These little surfaces show the range I
+            like working in: visual systems, fast feedback loops, and interfaces
+            that reshape themselves around the job.
+          </p>
+        </div>
+
+        <div class="playground-grid" aria-label="Interactive developer demos">
+          <article class="play-card field-card" data-reveal>
+            <div class="play-card-head">
+              <span>01 Creative Code</span>
+              <h3>Signal Field</h3>
+              <p>Move your cursor through the canvas. The system redraws around you.</p>
+            </div>
+            <canvas id="field-canvas" aria-label="Interactive signal field"></canvas>
+            <div class="field-controls" aria-label="Signal field modes">
+              <button class="field-button is-active" type="button" data-field-theme="mesh">
+                Mesh
+              </button>
+              <button class="field-button" type="button" data-field-theme="orbit">
+                Orbit
+              </button>
+              <button class="field-button" type="button" data-field-theme="radar">
+                Radar
+              </button>
+            </div>
+          </article>
+
+          <article class="play-card api-card" data-reveal>
+            <div class="play-card-head">
+              <span>02 Systems</span>
+              <h3>API Pulse</h3>
+              <p>A tiny request simulator with cache hits, queues, and latency.</p>
+            </div>
+            <div class="api-pipeline" aria-hidden="true">
+              <div class="pipeline-node">Client</div>
+              <div class="pipeline-node">Cache</div>
+              <div class="pipeline-node">API</div>
+              <div class="pipeline-node">DB</div>
+              <div class="packet-lane" data-packet-lane></div>
+            </div>
+            <div class="api-stats" aria-label="API pulse stats">
+              <div><span>P95</span><strong data-latency>142ms</strong></div>
+              <div><span>Cache</span><strong data-cache>67%</strong></div>
+              <div><span>Queue</span><strong data-queue>03</strong></div>
+            </div>
+            <button class="button primary pulse-button" type="button" data-send-pulse>
+              Send Burst
+            </button>
+          </article>
+
+          <article class="play-card morph-card" data-reveal>
+            <div class="play-card-head">
+              <span>03 Interface Craft</span>
+              <h3>UI Morph</h3>
+              <p>Switch the intent and the same shell becomes a different product.</p>
+            </div>
+            <div class="morph-switch" role="group" aria-label="Interface mode">
+              <button class="morph-button is-active" type="button" data-ui-mode="dashboard">
+                Dashboard
+              </button>
+              <button class="morph-button" type="button" data-ui-mode="checkout">
+                Checkout
+              </button>
+              <button class="morph-button" type="button" data-ui-mode="booking">
+                Booking
+              </button>
+            </div>
+            <div class="mini-screen" data-mini-screen aria-live="polite"></div>
+          </article>
+        </div>
+
+        <div class="lab-note">
+          <span>Built as part of this page</span>
+          <p>
+            Canvas animation, DOM state, responsive UI, and micro-interactions
+            working together without a framework.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="work-title">Selected work with visible engineering judgment.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Web App</span>
+              <span>2026</span>
+            </div>
+            <h3>Tuya PA</h3>
+            <p>
+              A clean product experience for account flows, content pages, and
+              public-facing trust signals.
+            </p>
+            <div class="project-proof">
+              <span>Proves</span>
+              <strong>Auth thinking, trust pages, responsive structure</strong>
+            </div>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>HTML</li>
+              <li>Auth</li>
+              <li>Responsive UI</li>
+            </ul>
+          </article>
+
+          <article class="project-card accent">
+            <div class="project-meta">
+              <span>Commerce</span>
+              <span>2026</span>
+            </div>
+            <h3>Taxi Wine</h3>
+            <p>
+              A focused site foundation for browsing, conversion, and content
+              management with room to grow.
+            </p>
+            <div class="project-proof">
+              <span>Proves</span>
+              <strong>Performance, content systems, commerce flow</strong>
+            </div>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>Astro</li>
+              <li>Content</li>
+              <li>Performance</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Systems</span>
+              <span>Ongoing</span>
+            </div>
+            <h3>Automation Toolkit</h3>
+            <p>
+              Small utilities and workflows that remove repetitive work and
+              make operations easier to maintain.
+            </p>
+            <div class="project-proof">
+              <span>Proves</span>
+              <strong>Automation, API glue, practical leverage</strong>
+            </div>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>Node.js</li>
+              <li>APIs</li>
+              <li>Tooling</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="stack" aria-labelledby="stack-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Stack</p>
+          <h2 id="stack-title">Tools I reach for when the work needs to last.</h2>
+        </div>
+
+        <div class="stack-panel">
+          <div class="stack-group">
+            <h3>Frontend</h3>
+            <p>TypeScript, React, Astro, semantic HTML, CSS systems</p>
+          </div>
+          <div class="stack-group">
+            <h3>Backend</h3>
+            <p>Node.js, REST APIs, authentication, data modeling</p>
+          </div>
+          <div class="stack-group">
+            <h3>Delivery</h3>
+            <p>Performance audits, accessibility passes, deploy pipelines</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Calm engineering for messy product problems.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            I like software that respects the person using it and the team that
+            has to maintain it. That means clear states, obvious flows, sharp
+            copy, and code that is boring in the best possible way.
+          </p>
+          <p>
+            My sweet spot is moving between product thinking and implementation:
+            translating rough ideas into interfaces, APIs, and releaseable
+            slices without losing the human texture of the work.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Have a build in mind?</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@eduardo.dev">
+            <span>Start a Conversation</span>
+            <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="button ghost" href="https://github.com/" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <span aria-hidden="true">&#8984;</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> Eduardo. Built with care.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
