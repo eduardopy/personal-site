@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f1311" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Case file: Tuya Analytics. A clinic asked for AI to find high-cost patients. The real first problem was getting their own data into a shape they could trust — and a transparent way to score risk."
+    />
+    <meta property="og:title" content="Tuya Analytics — Case file" />
+    <meta property="og:description" content="They asked for AI. What they needed first was their own data, queryable, with a transparent risk score clinicians could argue with." />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1311'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='17' font-weight='800' fill='%23fbfaf6' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+    <title>Tuya Analytics — Case file — Eduardo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./case.css" />
+  </head>
+  <body class="case">
+    <header class="site-header" data-header>
+      <a class="brand" href="./index.html" aria-label="Eduardo — home">
+        <span class="brand-mark">E</span>
+        <span class="brand-name">Eduardo</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#contact" class="nav-cta">Contact <span aria-hidden="true">&#8594;</span></a>
+      </nav>
+    </header>
+
+    <main class="case-main">
+      <a class="case-back" href="./index.html#work">
+        <span aria-hidden="true">&#8592;</span> Back to work
+      </a>
+
+      <header class="case-hero">
+        <p class="eyebrow">Case file &middot; Healthcare &middot; 2025</p>
+        <h1>Tuya Analytics</h1>
+        <p class="case-dek">
+          A primary-care clinic asked for AI to find their high-cost patients.
+          The real first problem was that they couldn't yet ask their own data
+          a single useful question — so that's what I built first.
+        </p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Sole engineer — discovery, design, build</dd></div>
+          <div><dt>Stack</dt><dd>Python &middot; DuckDB &middot; FHIR &middot; Streamlit &rarr; FastAPI / JS</dd></div>
+          <div><dt>Status</dt><dd>In production, weekly &middot; v2 in progress</dd></div>
+        </dl>
+      </header>
+
+      <article class="case-body">
+        <section class="case-section" data-reveal>
+          <p class="step">01 — The ask</p>
+          <h2>"Can you use AI to find our high-cost patients?"</h2>
+          <p>
+            That was the brief, more or less verbatim. The clinic runs on
+            Practice Fusion, sees thousands of patients, and could feel that
+            some of them — the ones cycling through the ER, falling out of
+            follow-up, drifting off their care plans — were both the most at
+            risk and the most expensive. They wanted a model to point at them.
+          </p>
+          <p>
+            "Use AI" is a solution wearing the costume of a problem. The useful
+            move wasn't to nod and reach for a model. It was to ask what
+            decision this was supposed to make easier, and what they'd actually
+            need in place before any model could earn its keep.
+          </p>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">02 — The real problem</p>
+          <h2>They didn't have a model problem. They had a data problem.</h2>
+          <p>
+            Their patient history lived inside the EHR, in a shape built for
+            running a clinic visit-by-visit — not for asking "who, across the
+            whole panel, is rising in risk right now?" There was no local copy
+            they could query, no way to look across encounters, labs, and
+            appointments at once. You cannot train or trust a model on data you
+            can't even pull together and inspect.
+          </p>
+
+          <div class="reframe" data-reveal>
+            <div class="reframe-col asked">
+              <p class="reframe-label">What they asked for</p>
+              <p class="reframe-text">An ML model to flag high-<em>cost</em> patients.</p>
+            </div>
+            <div class="reframe-arrow" aria-hidden="true">&#8594;</div>
+            <div class="reframe-col needed">
+              <p class="reframe-label">What they needed first</p>
+              <p class="reframe-text">
+                Their own records pulled into a database they could question —
+                and a <em>transparent</em> way to score high-<em>risk</em>
+                patients that a clinician could read, trust, and push back on.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            So the plan inverted the request. Build the data foundation and a
+            rule-based, fully explainable risk score <em>now</em> — something
+            that delivers a usable worklist this month and that a skeptical
+            clinician can audit line by line. Treat machine learning as a later
+            improvement layered on that foundation, once there's a baseline to
+            beat and clean history to learn from. Not AI from the get-go;
+            AI once it has somewhere meaningful to stand.
+          </p>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">03 — Constraints that shaped everything</p>
+          <h2>The non-negotiables came from the room, not the README.</h2>
+          <ul class="constraint-list">
+            <li>
+              <strong>PHI never leaves the practice.</strong> The whole tool
+              runs locally against their own export. No cloud, no third party
+              holding patient data.
+            </li>
+            <li>
+              <strong>Every score has to explain itself.</strong> A black box
+              that says "this patient is a 92" is useless to a clinician who
+              has to act on it. The "why" is part of the output, not an
+              afterthought.
+            </li>
+            <li>
+              <strong>It has to run every week, by a normal person.</strong>
+              A handful of commands, repeatable, hard to get wrong.
+            </li>
+            <li>
+              <strong>It has to survive me.</strong> Documented, dependency-light,
+              legible to whoever maintains it next.
+            </li>
+          </ul>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">04 — The system</p>
+          <h2>A small pipeline, each stage inspectable.</h2>
+          <p>
+            Practice Fusion exposes a Bulk FHIR export. That goes into a
+            single-file DuckDB warehouse — fast analytical SQL over the whole
+            panel, no server to run. A configurable rubric scores every patient;
+            each run is versioned and audited so you can always answer "why did
+            this number change?"
+          </p>
+          <ol class="pipeline" aria-label="Data pipeline">
+            <li><span>01</span>Bulk FHIR export</li>
+            <li><span>02</span>DuckDB warehouse</li>
+            <li><span>03</span>Rubric scoring engine</li>
+            <li><span>04</span>Versioned, audited run</li>
+            <li><span>05</span>Weekly worklist</li>
+          </ol>
+          <p>
+            The rubric lives in a YAML file — weights and thresholds a human can
+            read and adjust, not magic numbers buried in code. Change the rubric
+            and the CLI can diff the new run against the old one before anything
+            reaches the people using it.
+          </p>
+          <p>
+            On top of the engine sits the cockpit — the screen a nurse actually
+            uses to run the week and read the list. It started as a Streamlit
+            app; as the workflow grew (preflight checks, import safety, outreach
+            logging) it began outgrowing what Streamlit can hold, so it's being
+            rebuilt on a FastAPI backend with a real JS front end.
+          </p>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">05 — Working proof</p>
+          <h2>What a Monday actually looks like.</h2>
+          <p>
+            Under the cockpit, the engine is a CLI — <code>pfbulk</code> — and it
+            stays the source of truth: ingest the week's export, score the panel,
+            get a ranked worklist where every name carries its reasons. (Synthetic
+            data shown here; real runs never leave the clinic.)
+          </p>
+
+          <div class="terminal" data-reveal aria-label="Example command-line session">
+            <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <pre class="term-body"><code><span class="term-line"><span class="term-prompt">$</span> pfbulk ingest-downloaded --run-dir data/raw/pf/2025-05-26</span>
+<span class="term-line term-out">  ✓ 4,812 patients · 38,902 encounters · 9,140 lab results</span>
+<span class="term-line"><span class="term-prompt">$</span> pfbulk score-vip --snapshot-date 2025-05-26</span>
+<span class="term-line term-out">  scoring 4,812 patients · rubric: vip.yaml (v1)</span>
+<span class="term-line term-out term-rule">  ──────────────────────────────────────────────</span>
+<span class="term-line term-out"><span class="term-risk">92</span>  Pt #4821   ER visit (12d) · post-hospital, no follow-up · A1c overdue</span>
+<span class="term-line term-out"><span class="term-risk">87</span>  Pt #3307   3 missed appts (90d) · 5 chronic conditions · no future visit</span>
+<span class="term-line term-out"><span class="term-risk">81</span>  Pt #5092   post-hospital (5d) · no follow-up scheduled</span>
+<span class="term-line term-out"><span class="term-risk-low">63</span>  Pt #2210   A1c overdue · 1 missed appt (90d)</span>
+<span class="term-line term-out term-dim">  … 4,808 more, ranked</span>
+<span class="term-line"><span class="term-prompt">$</span> pfbulk score-vip diff run_0518 run_0526</span>
+<span class="term-line term-out">  ↑ 14 patients rose into the top 100 · 9 fell out · rubric unchanged</span></code></pre>
+          </div>
+
+          <p>
+            And because every score is built from named components, any number
+            on that list opens up into its reasons:
+          </p>
+
+          <figure class="anatomy" data-reveal>
+            <figcaption>
+              <span>Why Pt #4821 scored</span>
+              <strong>92<small>/100</small></strong>
+            </figcaption>
+            <ul class="anatomy-bars">
+              <li style="--w: 34%"><span class="a-label">Recent ER / urgent-care visit</span><span class="a-val">+34</span></li>
+              <li style="--w: 28%"><span class="a-label">Post-hospital, no follow-up scheduled</span><span class="a-val">+28</span></li>
+              <li style="--w: 18%"><span class="a-label">Overdue chronic-care labs (A1c)</span><span class="a-val">+18</span></li>
+              <li style="--w: 12%"><span class="a-label">Missed appointments (90d)</span><span class="a-val">+12</span></li>
+            </ul>
+            <p class="anatomy-note">
+              No weight is hidden. A clinician who disagrees can point at the
+              exact line — and the rubric is a config file, so disagreement
+              becomes a one-line change, not a rewrite.
+            </p>
+          </figure>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">06 — What it proved</p>
+          <h2>The boring foundation was the whole win.</h2>
+          <p>
+            The clinic gets a defensible worklist every week, and can ask any
+            score "why?" and get a real answer — which is exactly what makes
+            people trust it enough to act. Just as importantly, the thing they
+            originally asked for is now <em>possible</em>: there's a clean,
+            queryable history and a transparent baseline to measure against. The
+            unglamorous data work didn't postpone the AI goal. It's the only
+            thing that ever made it reachable.
+          </p>
+          <p>
+            One thing worth being honest about: every weight in that rubric is
+            still a careful guess. There's no ground truth yet for who
+            <em>should</em> have been called. So the clinic started logging what
+            happens after each one — reached, voicemail, appointment booked,
+            declined — captured by the nurses doing the outreach. That data can't
+            be backfilled, so it's being collected now, before it's strictly
+            needed: in a year, it's what turns hand-tuned scores into validated
+            ones.
+          </p>
+        </section>
+
+        <section class="case-section" data-reveal>
+          <p class="step">07 — What's next</p>
+          <h2>Now the model has somewhere to stand.</h2>
+          <p>
+            A v2 scoring engine is in progress — it runs in parallel with v1,
+            explains every rule component, and can diff two runs so a rubric
+            change is never a leap of faith. The cockpit is moving onto a FastAPI
+            + JS foundation built for that growth. And once enough outreach
+            outcomes are logged, the original ask finally has somewhere to stand:
+            machine learning judged against the rule-based baseline and the real
+            engagement data — not replacing the explainability that earned the
+            clinic's trust, but earning its own place on top of it.
+          </p>
+          <div class="case-cta">
+            <a class="button primary" href="./index.html#contact">
+              <span>Send me the messy version</span>
+              <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="button ghost" href="./index.html#work">
+              <span>See the other work</span>
+              <span aria-hidden="true">&#8592;</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> Eduardo. Unclear ideas into working proof.</p>
+      <div class="footer-links">
+        <a href="https://github.com/eduardopy" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@eduardo.dev">Email</a>
+        <a href="./index.html#top">Home</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
