@@ -453,331 +453,60 @@ h1 em::after {
   font-weight: 700;
 }
 
-/* ============== Systems lab ============== */
-.lab-section {
+/* ============== Before code ============== */
+.proof-section {
   border-top: 1px solid var(--line);
 }
 
-.showcase-layout {
+.proof-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
-  gap: 28px;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.showcase-stage {
-  position: sticky;
-  top: 108px;
-}
-
-.stage-shell {
-  position: relative;
-  min-height: 580px;
-  overflow: hidden;
-  border: 1px solid rgba(241, 195, 108, 0.18);
-  border-radius: var(--radius-lg);
-  color: var(--paper-strong);
-  background:
-    radial-gradient(circle at 18% 18%, rgba(241, 195, 108, 0.16), transparent 34%),
-    radial-gradient(circle at 88% 12%, rgba(170, 75, 54, 0.22), transparent 30%),
-    linear-gradient(145deg, #0f1311 0%, #1a211d 52%, #111310 100%);
-  box-shadow: var(--shadow-lg);
-}
-
-.stage-chrome {
-  position: absolute;
-  top: 18px;
-  left: 20px;
+.proof-card {
+  min-height: 280px;
   display: flex;
-  gap: 7px;
-  z-index: 2;
-}
-
-.stage-chrome span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.28);
-}
-
-.stage-visual {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  align-content: center;
-  gap: 28px;
-  padding: 58px 42px 42px;
-  opacity: 0;
-  transform: translateY(18px) scale(0.985);
-  pointer-events: none;
-  transition: opacity 360ms var(--ease-out), transform 360ms var(--ease-out);
-}
-
-.stage-visual.is-active {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-}
-
-.stage-label {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.72);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.stage-label span {
-  color: var(--gold-soft);
-}
-
-.ambiguity-map {
-  display: grid;
-  grid-template-columns: 1fr 62px 1fr 62px 1fr;
-  align-items: center;
-}
-
-.map-node {
-  min-height: 168px;
-  display: grid;
-  align-content: space-between;
-  gap: 28px;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
-}
-
-.map-node span,
-.memory-question,
-.rubric-score small {
-  color: var(--gold-soft);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.map-node strong {
-  display: block;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1rem, 1.4vw, 1.28rem);
-  line-height: 1.18;
-  letter-spacing: -0.018em;
-}
-
-.map-node.output {
-  background: rgba(116, 217, 155, 0.1);
-  border-color: rgba(116, 217, 155, 0.26);
-}
-
-.map-rail {
-  height: 2px;
-  background: linear-gradient(90deg, rgba(241, 195, 108, 0.2), var(--gold-soft), rgba(241, 195, 108, 0.2));
-}
-
-.memory-panel,
-.rubric-panel {
-  display: grid;
-  gap: 22px;
-}
-
-.memory-question {
-  margin: 0;
-}
-
-.memory-chips,
-.rubric-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.memory-chips button,
-.rubric-controls button {
-  min-height: 36px;
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  color: rgba(255, 255, 255, 0.78);
-  background: rgba(255, 255, 255, 0.06);
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.86rem;
-  font-weight: 700;
-}
-
-.memory-chips button.is-active,
-.memory-chips button:hover,
-.memory-chips button:focus-visible,
-.rubric-controls button.is-active,
-.rubric-controls button:hover,
-.rubric-controls button:focus-visible {
-  color: var(--ink);
-  background: var(--gold-soft);
-  outline: none;
-}
-
-.memory-results {
-  display: grid;
-  gap: 12px;
-}
-
-.memory-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 68px;
-  gap: 12px;
-  align-items: center;
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.memory-row span {
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.94rem;
-  line-height: 1.4;
-}
-
-.memory-row strong {
-  color: var(--gold-soft);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.82rem;
-  text-align: right;
-}
-
-.memory-row i {
-  grid-column: 1 / -1;
-  display: block;
-  height: 8px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.memory-row i::before {
-  display: block;
-  width: var(--score, 50%);
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--brick), var(--gold-soft), var(--mint));
-  content: "";
-  transition: width 260ms var(--ease-out);
-}
-
-.rubric-panel {
-  grid-template-columns: 0.74fr 1fr;
-  align-items: center;
-}
-
-.rubric-score {
-  display: grid;
-  place-items: center;
-  min-height: 230px;
-  border: 1px solid rgba(116, 217, 155, 0.24);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(116, 217, 155, 0.18), transparent 62%),
-    rgba(255, 255, 255, 0.04);
-}
-
-.rubric-score span {
-  color: var(--paper-strong);
-  font-family: "JetBrains Mono", monospace;
-  font-size: clamp(3rem, 7vw, 5.2rem);
-  font-weight: 700;
-  letter-spacing: -0.06em;
-}
-
-.rubric-score small {
-  margin-top: -38px;
-}
-
-.rubric-bars {
-  display: grid;
+  flex-direction: column;
   gap: 16px;
-}
-
-.rubric-bars div {
-  display: grid;
-  gap: 8px;
-}
-
-.rubric-bars span {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.rubric-bars i {
-  display: block;
-  width: 100%;
-  height: 12px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.rubric-bars i::before {
-  display: block;
-  width: var(--score, 50%);
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--blue), var(--gold-soft), var(--mint));
-  content: "";
-  transition: width 260ms var(--ease-out);
-}
-
-.rubric-controls {
-  grid-column: 1 / -1;
-}
-
-.showcase-steps {
-  display: grid;
-  gap: 16px;
-  padding: 74px 0;
-}
-
-.showcase-step {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.64);
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  transition: border-color 220ms var(--ease-out),
-    background-color 220ms var(--ease-out), transform 220ms var(--ease-out),
-    box-shadow 220ms var(--ease-out);
-}
-
-.showcase-step:hover,
-.showcase-step:focus-visible,
-.showcase-step.is-active {
-  border-color: rgba(170, 75, 54, 0.34);
   background: var(--paper-strong);
-  box-shadow: var(--shadow-md);
-  outline: none;
-  transform: translateX(-4px);
+  box-shadow: var(--shadow-sm);
 }
 
-.showcase-step h3 {
-  margin-top: 30px;
-  font-size: 1.35rem;
+.proof-card h3 {
+  margin-top: auto;
+  font-size: 1.42rem;
   line-height: 1.12;
 }
 
-.showcase-step p {
-  margin: 14px 0 0;
+.proof-card p {
+  margin: 0;
   color: var(--muted-strong);
   font-size: 0.98rem;
   line-height: 1.64;
+}
+
+.thesis-panel {
+  margin-top: 22px;
+  padding: 34px;
+  border: 1px solid rgba(31, 61, 47, 0.16);
+  border-radius: var(--radius-md);
+  color: var(--paper-strong);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(241, 195, 108, 0.16), transparent 42%),
+    linear-gradient(135deg, #131613 0%, #1f3d2f 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.thesis-panel p {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.024em;
 }
 
 /* ============== Work ============== */
@@ -935,21 +664,6 @@ h1 em::after {
 .project-card.accent .project-outcome {
   border-color: rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.94) !important;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  align-self: flex-start;
-  color: var(--gold-soft);
-  font-weight: 700;
-}
-
-.project-link:hover,
-.project-link:focus-visible {
-  color: var(--paper-strong);
-  outline: none;
 }
 
 /* ============== Approach (How I work) ============== */
@@ -1194,10 +908,10 @@ h1 em::after {
   }
 
   .section-heading,
+  .proof-grid,
   .project-grid,
   .approach-list,
   .about-section,
-  .showcase-layout,
   .numbers-strip {
     grid-template-columns: 1fr;
   }
@@ -1205,20 +919,6 @@ h1 em::after {
   .section-heading {
     gap: 18px;
     margin-bottom: 36px;
-  }
-
-  .showcase-stage {
-    position: static;
-  }
-
-  .showcase-steps {
-    padding: 0;
-  }
-
-  .showcase-step.is-active,
-  .showcase-step:hover,
-  .showcase-step:focus-visible {
-    transform: none;
   }
 
   .contact-section {
@@ -1276,43 +976,9 @@ h1 em::after {
   }
 
   .project-card,
-  .approach-list li,
-  .showcase-step {
+  .proof-card,
+  .approach-list li {
     padding: 24px;
-  }
-
-  .stage-shell {
-    min-height: 560px;
-  }
-
-  .stage-visual {
-    padding: 52px 18px 22px;
-  }
-
-  .ambiguity-map {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .map-node {
-    min-height: 112px;
-  }
-
-  .map-rail {
-    width: 2px;
-    height: 28px;
-    justify-self: center;
-    background: linear-gradient(180deg, rgba(241, 195, 108, 0.2), var(--gold-soft), rgba(241, 195, 108, 0.2));
-  }
-
-  .rubric-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .rubric-score {
-    min-height: 190px;
-    width: 190px;
-    justify-self: center;
   }
 
   .numbers-strip strong {
