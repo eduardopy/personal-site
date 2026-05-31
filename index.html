@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Eduardo is a software developer building thoughtful web products, resilient systems, and clean user experiences."
+      content="Eduardo is a software engineer who builds practical business systems, automations, dashboards, and internal tools for teams that need software to make work easier."
     />
-    <title>Eduardo | Software Developer</title>
+    <title>Eduardo | Software Engineer for Practical Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -24,10 +24,10 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#systems">Systems</a>
         <a href="#proof">Proof</a>
         <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
+        <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -35,236 +35,262 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <p class="eyebrow">Software Developer</p>
-          <h1 id="hero-title">Eduardo</h1>
+          <p class="eyebrow">Software Engineering for Practical Work</p>
+          <h1 id="hero-title">I build software that makes messy work easier.</h1>
           <p class="hero-copy">
-            I build product systems that feel calm on the surface and smart
-            underneath: interfaces, APIs, automations, and the connective tissue
-            that helps teams move faster.
+            I help teams replace scattered spreadsheets, slow manual steps, and
+            unclear customer paths with dependable tools, automations, and web
+            systems that people can actually use.
           </p>
-          <div class="hero-signals" aria-label="Core strengths">
-            <span><strong>01</strong> Interface craft</span>
-            <span><strong>02</strong> System judgment</span>
-            <span><strong>03</strong> Shipping rhythm</span>
-          </div>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#proof">
-              <span>Open the Lab</span>
-              <span aria-hidden="true">&#8600;</span>
+            <a class="button primary" href="mailto:hello@eduardo.dev?subject=Project%20inquiry">
+              <span>Start a Project</span>
+              <span aria-hidden="true">&#8599;</span>
             </a>
-            <a class="button secondary" href="mailto:hello@eduardo.dev">
-              <span>Email Me</span>
-              <span aria-hidden="true">&#9993;</span>
+            <a class="button secondary" href="#proof">
+              <span>See Live Proof</span>
+              <span aria-hidden="true">&#8600;</span>
             </a>
           </div>
         </div>
 
-        <aside class="hero-status" aria-label="Availability">
+        <aside class="hero-note" aria-label="Engineering focus">
           <span class="status-dot" aria-hidden="true"></span>
-          Available for product builds and freelance work
+          CS foundations, clean delivery, business-friendly handoff
         </aside>
       </section>
 
-      <section class="intro-strip" aria-label="Developer focus areas">
-        <p>Prototype fast</p>
-        <p>Stabilize deeply</p>
-        <p>Polish deliberately</p>
+      <section class="outcome-strip" aria-label="Business outcomes">
+        <p>Automate busywork</p>
+        <p>Connect tools</p>
+        <p>Make decisions clearer</p>
       </section>
 
-      <section class="playground-lab" id="proof" aria-labelledby="proof-title">
-        <div class="playground-head">
-          <p class="eyebrow">Interactive Lab</p>
-          <h2 id="proof-title">A few small things that are simply fun to use.</h2>
-          <p>
-            Less case study, more craft. These little surfaces show the range I
-            like working in: visual systems, fast feedback loops, and interfaces
-            that reshape themselves around the job.
-          </p>
-        </div>
-
-        <div class="playground-grid" aria-label="Interactive developer demos">
-          <article class="play-card field-card" data-reveal>
-            <div class="play-card-head">
-              <span>01 Creative Code</span>
-              <h3>Signal Field</h3>
-              <p>Move your cursor through the canvas. The system redraws around you.</p>
-            </div>
-            <canvas id="field-canvas" aria-label="Interactive signal field"></canvas>
-            <div class="field-controls" aria-label="Signal field modes">
-              <button class="field-button is-active" type="button" data-field-theme="mesh">
-                Mesh
-              </button>
-              <button class="field-button" type="button" data-field-theme="orbit">
-                Orbit
-              </button>
-              <button class="field-button" type="button" data-field-theme="radar">
-                Radar
-              </button>
-            </div>
-          </article>
-
-          <article class="play-card api-card" data-reveal>
-            <div class="play-card-head">
-              <span>02 Systems</span>
-              <h3>API Pulse</h3>
-              <p>A tiny request simulator with cache hits, queues, and latency.</p>
-            </div>
-            <div class="api-pipeline" aria-hidden="true">
-              <div class="pipeline-node">Client</div>
-              <div class="pipeline-node">Cache</div>
-              <div class="pipeline-node">API</div>
-              <div class="pipeline-node">DB</div>
-              <div class="packet-lane" data-packet-lane></div>
-            </div>
-            <div class="api-stats" aria-label="API pulse stats">
-              <div><span>P95</span><strong data-latency>142ms</strong></div>
-              <div><span>Cache</span><strong data-cache>67%</strong></div>
-              <div><span>Queue</span><strong data-queue>03</strong></div>
-            </div>
-            <button class="button primary pulse-button" type="button" data-send-pulse>
-              Send Burst
-            </button>
-          </article>
-
-          <article class="play-card morph-card" data-reveal>
-            <div class="play-card-head">
-              <span>03 Interface Craft</span>
-              <h3>UI Morph</h3>
-              <p>Switch the intent and the same shell becomes a different product.</p>
-            </div>
-            <div class="morph-switch" role="group" aria-label="Interface mode">
-              <button class="morph-button is-active" type="button" data-ui-mode="dashboard">
-                Dashboard
-              </button>
-              <button class="morph-button" type="button" data-ui-mode="checkout">
-                Checkout
-              </button>
-              <button class="morph-button" type="button" data-ui-mode="booking">
-                Booking
-              </button>
-            </div>
-            <div class="mini-screen" data-mini-screen aria-live="polite"></div>
-          </article>
-        </div>
-
-        <div class="lab-note">
-          <span>Built as part of this page</span>
-          <p>
-            Canvas animation, DOM state, responsive UI, and micro-interactions
-            working together without a framework.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="work" aria-labelledby="work-title">
+      <section class="section systems-section" id="systems" aria-labelledby="systems-title">
         <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2 id="work-title">Selected work with visible engineering judgment.</h2>
+          <p class="eyebrow">What I Build</p>
+          <h2 id="systems-title">Not just a website. Software that improves how the work gets done.</h2>
+          <p>
+            The best project might be a customer portal, a dashboard, a small
+            internal app, a data cleanup flow, or a website with serious logic
+            behind it. I start with the job your business needs done.
+          </p>
+        </div>
+
+        <div class="system-grid">
+          <article class="system-card">
+            <span>01</span>
+            <h3>Internal tools</h3>
+            <p>
+              Dashboards, request queues, admin panels, and small apps that
+              give teams one reliable place to work.
+            </p>
+          </article>
+          <article class="system-card accent">
+            <span>02</span>
+            <h3>Automation flows</h3>
+            <p>
+              Software that moves information between forms, spreadsheets,
+              email, CRMs, calendars, and databases without copy-paste chaos.
+            </p>
+          </article>
+          <article class="system-card">
+            <span>03</span>
+            <h3>Decision helpers</h3>
+            <p>
+              Search, matching, scoring, routing, reporting, and lightweight AI
+              tools that make complex choices easier to act on.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section proof-section" id="proof" aria-labelledby="proof-title">
+        <div class="section-heading proof-heading">
+          <p class="eyebrow">Live Proof</p>
+          <h2 id="proof-title">A tiny operations system, running in the browser.</h2>
+          <p>
+            This demo scores hundreds of possible dispatch plans, balances
+            workload, and redraws the best route. The point is simple: useful
+            software can make hard operational decisions feel obvious.
+          </p>
+        </div>
+
+        <div class="optimizer-demo">
+          <div class="demo-topbar">
+            <div>
+              <span class="demo-label">Dispatch optimizer</span>
+              <strong data-plan-name>Balanced day</strong>
+            </div>
+            <div class="scenario-buttons" role="tablist" aria-label="Dispatch scenarios">
+              <button class="scenario-button is-active" type="button" data-scenario="balanced">
+                Balanced
+              </button>
+              <button class="scenario-button" type="button" data-scenario="rush">
+                Rush
+              </button>
+              <button class="scenario-button" type="button" data-scenario="travel">
+                Shortest Drive
+              </button>
+            </div>
+          </div>
+
+          <div class="demo-body">
+            <div class="map-shell">
+              <svg
+                class="dispatch-map"
+                viewBox="0 0 760 500"
+                role="img"
+                aria-label="Animated service dispatch map"
+              >
+                <defs>
+                  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+                    <path d="M 38 0 L 0 0 0 38" fill="none" />
+                  </pattern>
+                  <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.14" />
+                  </filter>
+                </defs>
+                <rect class="map-bg" width="760" height="500" rx="18" />
+                <rect class="map-grid" width="760" height="500" rx="18" fill="url(#grid)" />
+                <g data-route-lines></g>
+                <g data-map-nodes></g>
+              </svg>
+
+              <div class="metric-cluster" aria-label="Optimizer metrics">
+                <div>
+                  <span data-demo-miles>0</span>
+                  <small>route miles</small>
+                </div>
+                <div>
+                  <span data-demo-balance>0%</span>
+                  <small>load balance</small>
+                </div>
+                <div>
+                  <span data-demo-checked>0</span>
+                  <small>plans scored</small>
+                </div>
+              </div>
+            </div>
+
+            <aside class="demo-panel">
+              <div class="panel-header">
+                <span>Chosen plan</span>
+                <strong data-plan-score>Score 0</strong>
+              </div>
+              <p data-plan-summary>
+                The optimizer is choosing the best route for the current day.
+              </p>
+              <div class="schedule-list" data-schedule-list></div>
+              <div class="logic-strip">
+                <span>Under the hood</span>
+                <p data-model-summary>
+                  Brute-force assignment, greedy route ordering, weighted
+                  scoring, and live SVG rendering.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Recent Builds</p>
+          <h2 id="work-title">Practical software and web systems for real business needs.</h2>
         </div>
 
         <div class="project-grid">
           <article class="project-card">
             <div class="project-meta">
-              <span>Web App</span>
-              <span>2026</span>
+              <span>Healthcare</span>
+              <span>Web System</span>
             </div>
             <h3>Tuya PA</h3>
             <p>
-              A clean product experience for account flows, content pages, and
-              public-facing trust signals.
+              A patient-facing site with location pages, forms, privacy pages,
+              and bilingual content paths that reduce avoidable phone calls.
             </p>
-            <div class="project-proof">
-              <span>Proves</span>
-              <strong>Auth thinking, trust pages, responsive structure</strong>
+            <div class="business-win">
+              <span>Business win</span>
+              <strong>Patients can find the right office information and documents faster.</strong>
             </div>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>HTML</li>
-              <li>Auth</li>
-              <li>Responsive UI</li>
-            </ul>
           </article>
 
           <article class="project-card accent">
             <div class="project-meta">
-              <span>Commerce</span>
-              <span>2026</span>
+              <span>Local Commerce</span>
+              <span>Service Flow</span>
             </div>
             <h3>Taxi Wine</h3>
             <p>
-              A focused site foundation for browsing, conversion, and content
-              management with room to grow.
+              A polished digital foundation for a wine delivery business, built
+              around trust, service clarity, and customer action.
             </p>
-            <div class="project-proof">
-              <span>Proves</span>
-              <strong>Performance, content systems, commerce flow</strong>
+            <div class="business-win">
+              <span>Business win</span>
+              <strong>Visitors understand the offer quickly and know exactly what to do next.</strong>
             </div>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>Astro</li>
-              <li>Content</li>
-              <li>Performance</li>
-            </ul>
           </article>
 
           <article class="project-card">
             <div class="project-meta">
-              <span>Systems</span>
-              <span>Ongoing</span>
+              <span>Operations</span>
+              <span>Internal Tools</span>
             </div>
-            <h3>Automation Toolkit</h3>
+            <h3>Admin Helpers</h3>
             <p>
-              Small utilities and workflows that remove repetitive work and
-              make operations easier to maintain.
+              Small systems that clean up requests, reduce copy-paste work, and
+              make follow-up easier for busy teams.
             </p>
-            <div class="project-proof">
-              <span>Proves</span>
-              <strong>Automation, API glue, practical leverage</strong>
+            <div class="business-win">
+              <span>Business win</span>
+              <strong>Teams spend less time sorting information and more time serving customers.</strong>
             </div>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>Node.js</li>
-              <li>APIs</li>
-              <li>Tooling</li>
-            </ul>
           </article>
         </div>
       </section>
 
-      <section class="section split-section" id="stack" aria-labelledby="stack-title">
+      <section class="section process-section" id="process" aria-labelledby="process-title">
         <div class="section-heading compact">
-          <p class="eyebrow">Stack</p>
-          <h2 id="stack-title">Tools I reach for when the work needs to last.</h2>
+          <p class="eyebrow">How It Works</p>
+          <h2 id="process-title">A software process that stays understandable.</h2>
         </div>
 
-        <div class="stack-panel">
-          <div class="stack-group">
-            <h3>Frontend</h3>
-            <p>TypeScript, React, Astro, semantic HTML, CSS systems</p>
-          </div>
-          <div class="stack-group">
-            <h3>Backend</h3>
-            <p>Node.js, REST APIs, authentication, data modeling</p>
-          </div>
-          <div class="stack-group">
-            <h3>Delivery</h3>
-            <p>Performance audits, accessibility passes, deploy pipelines</p>
-          </div>
+        <div class="process-list">
+          <article>
+            <span>01</span>
+            <h3>Map the real workflow</h3>
+            <p>We identify where time, information, or decisions are getting stuck.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Design the smallest useful system</h3>
+            <p>I turn the goal into clear screens, data flow, logic, and launch steps.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Build, test, and hand off</h3>
+            <p>You get working software, plain-language notes, and a system that can grow.</p>
+          </article>
         </div>
       </section>
 
       <section class="section about-section" id="about" aria-labelledby="about-title">
         <div class="section-heading compact">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Calm engineering for messy product problems.</h2>
+          <p class="eyebrow">About Eduardo</p>
+          <h2 id="about-title">A software engineer who cares about the useful part.</h2>
         </div>
         <div class="about-copy">
           <p>
-            I like software that respects the person using it and the team that
-            has to maintain it. That means clear states, obvious flows, sharp
-            copy, and code that is boring in the best possible way.
+            My background is computer science and software engineering. I like
+            turning ambiguous problems into systems: data models, user flows,
+            reliable logic, clean interfaces, and maintainable code.
           </p>
           <p>
-            My sweet spot is moving between product thinking and implementation:
-            translating rough ideas into interfaces, APIs, and releaseable
-            slices without losing the human texture of the work.
+            The goal is not to bury clients in technical choices. The goal is
+            software that solves the right problem, works smoothly on launch day,
+            and is still understandable after the excitement wears off.
           </p>
         </div>
       </section>
@@ -272,23 +298,23 @@
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Have a build in mind?</h2>
+          <h2 id="contact-title">Tell me what work you want software to make easier.</h2>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:hello@eduardo.dev">
-            <span>Start a Conversation</span>
+          <a class="button primary" href="mailto:hello@eduardo.dev?subject=Project%20inquiry">
+            <span>Email Eduardo</span>
             <span aria-hidden="true">&#8599;</span>
           </a>
-          <a class="button ghost" href="https://github.com/" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <span aria-hidden="true">&#8984;</span>
+          <a class="button ghost" href="#proof">
+            <span>Review the Demo</span>
+            <span aria-hidden="true">&#8593;</span>
           </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span data-year></span> Eduardo. Built with care.</p>
+      <p>&copy; <span data-year></span> Eduardo. Software for useful outcomes.</p>
       <a href="#top">Back to top</a>
     </footer>
 
