@@ -3,319 +3,357 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f1311" />
+    <meta name="color-scheme" content="light" />
     <meta
       name="description"
-      content="Eduardo is a software engineer who builds practical business systems, automations, dashboards, and internal tools for teams that need software to make work easier."
+      content="Eduardo — software engineer. Discovery and delivery across web, internal tooling, and data systems. Currently building a clinical analytics tool for a Florida medical practice."
     />
-    <title>Eduardo | Software Engineer for Practical Systems</title>
+    <meta property="og:title" content="Eduardo — Software engineer. Discovery and delivery." />
+    <meta property="og:description" content="I help teams figure out what to build, and then I build it. Recent work across clinical analytics, bilingual websites, and LLM systems." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1311'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='17' font-weight='800' fill='%23fbfaf6' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+    <title>Eduardo — Software engineer. Discovery and delivery.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Eduardo home">
+      <a class="brand" href="#top" aria-label="Eduardo — back to top">
         <span class="brand-mark">E</span>
-        <span>Eduardo</span>
+        <span class="brand-name">Eduardo</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#systems">Systems</a>
-        <a href="#proof">Proof</a>
+      <nav class="nav-links" aria-label="Primary">
         <a href="#work">Work</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact <span aria-hidden="true">&#8594;</span></a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <p class="eyebrow">Software Engineering for Practical Work</p>
-          <h1 id="hero-title">I build software that makes messy work easier.</h1>
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-glow"></div>
+        </div>
+
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Eduardo &middot; Software engineer</p>
+
+          <h1 id="hero-title">
+            I help teams figure out<br />
+            <em>what to build</em><br />
+            — and then I build it.
+          </h1>
+
           <p class="hero-copy">
-            I help teams replace scattered spreadsheets, slow manual steps, and
-            unclear customer paths with dependable tools, automations, and web
-            systems that people can actually use.
+            Currently building a clinical analytics tool for a Florida medical
+            practice. Previously: bilingual websites, internal tooling, and
+            the occasional algorithmic side quest.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="mailto:hello@eduardo.dev?subject=Project%20inquiry">
-              <span>Start a Project</span>
-              <span aria-hidden="true">&#8599;</span>
-            </a>
-            <a class="button secondary" href="#proof">
-              <span>See Live Proof</span>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#work">
+              <span>See recent work</span>
               <span aria-hidden="true">&#8600;</span>
             </a>
+            <a class="button secondary" href="#contact">
+              <span>Get in touch</span>
+              <span aria-hidden="true">&#8599;</span>
+            </a>
           </div>
-        </div>
-
-        <aside class="hero-note" aria-label="Engineering focus">
-          <span class="status-dot" aria-hidden="true"></span>
-          CS foundations, clean delivery, business-friendly handoff
-        </aside>
-      </section>
-
-      <section class="outcome-strip" aria-label="Business outcomes">
-        <p>Automate busywork</p>
-        <p>Connect tools</p>
-        <p>Make decisions clearer</p>
-      </section>
-
-      <section class="section systems-section" id="systems" aria-labelledby="systems-title">
-        <div class="section-heading">
-          <p class="eyebrow">What I Build</p>
-          <h2 id="systems-title">Not just a website. Software that improves how the work gets done.</h2>
-          <p>
-            The best project might be a customer portal, a dashboard, a small
-            internal app, a data cleanup flow, or a website with serious logic
-            behind it. I start with the job your business needs done.
-          </p>
-        </div>
-
-        <div class="system-grid">
-          <article class="system-card">
-            <span>01</span>
-            <h3>Internal tools</h3>
-            <p>
-              Dashboards, request queues, admin panels, and small apps that
-              give teams one reliable place to work.
-            </p>
-          </article>
-          <article class="system-card accent">
-            <span>02</span>
-            <h3>Automation flows</h3>
-            <p>
-              Software that moves information between forms, spreadsheets,
-              email, CRMs, calendars, and databases without copy-paste chaos.
-            </p>
-          </article>
-          <article class="system-card">
-            <span>03</span>
-            <h3>Decision helpers</h3>
-            <p>
-              Search, matching, scoring, routing, reporting, and lightweight AI
-              tools that make complex choices easier to act on.
-            </p>
-          </article>
         </div>
       </section>
 
-      <section class="section proof-section" id="proof" aria-labelledby="proof-title">
-        <div class="section-heading proof-heading">
-          <p class="eyebrow">Live Proof</p>
-          <h2 id="proof-title">A tiny operations system, running in the browser.</h2>
-          <p>
-            This demo scores hundreds of possible dispatch plans, balances
-            workload, and redraws the best route. The point is simple: useful
-            software can make hard operational decisions feel obvious.
-          </p>
-        </div>
-
-        <div class="optimizer-demo">
-          <div class="demo-topbar">
-            <div>
-              <span class="demo-label">Dispatch optimizer</span>
-              <strong data-plan-name>Balanced day</strong>
-            </div>
-            <div class="scenario-buttons" role="tablist" aria-label="Dispatch scenarios">
-              <button class="scenario-button is-active" type="button" data-scenario="balanced">
-                Balanced
-              </button>
-              <button class="scenario-button" type="button" data-scenario="rush">
-                Rush
-              </button>
-              <button class="scenario-button" type="button" data-scenario="travel">
-                Shortest Drive
-              </button>
-            </div>
-          </div>
-
-          <div class="demo-body">
-            <div class="map-shell">
-              <svg
-                class="dispatch-map"
-                viewBox="0 0 760 500"
-                role="img"
-                aria-label="Animated service dispatch map"
-              >
-                <defs>
-                  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
-                    <path d="M 38 0 L 0 0 0 38" fill="none" />
-                  </pattern>
-                  <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
-                    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.14" />
-                  </filter>
-                </defs>
-                <rect class="map-bg" width="760" height="500" rx="18" />
-                <rect class="map-grid" width="760" height="500" rx="18" fill="url(#grid)" />
-                <g data-route-lines></g>
-                <g data-map-nodes></g>
-              </svg>
-
-              <div class="metric-cluster" aria-label="Optimizer metrics">
-                <div>
-                  <span data-demo-miles>0</span>
-                  <small>route miles</small>
-                </div>
-                <div>
-                  <span data-demo-balance>0%</span>
-                  <small>load balance</small>
-                </div>
-                <div>
-                  <span data-demo-checked>0</span>
-                  <small>plans scored</small>
-                </div>
-              </div>
-            </div>
-
-            <aside class="demo-panel">
-              <div class="panel-header">
-                <span>Chosen plan</span>
-                <strong data-plan-score>Score 0</strong>
-              </div>
-              <p data-plan-summary>
-                The optimizer is choosing the best route for the current day.
-              </p>
-              <div class="schedule-list" data-schedule-list></div>
-              <div class="logic-strip">
-                <span>Under the hood</span>
-                <p data-model-summary>
-                  Brute-force assignment, greedy route ordering, weighted
-                  scoring, and live SVG rendering.
-                </p>
-              </div>
-            </aside>
-          </div>
+      <section class="marquee" aria-label="What I focus on">
+        <div class="marquee-track">
+          <span>Discovery and delivery</span>
+          <span aria-hidden="true">&#9670;</span>
+          <span>Web, data, and the systems in between</span>
+          <span aria-hidden="true">&#9670;</span>
+          <span>Hand-written code on real deadlines</span>
+          <span aria-hidden="true">&#9670;</span>
+          <span>Smallest useful version first</span>
+          <span aria-hidden="true">&#9670;</span>
+          <span>Built so the next person can maintain it</span>
+          <span aria-hidden="true">&#9670;</span>
         </div>
       </section>
 
       <section class="section work-section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">Recent Builds</p>
-          <h2 id="work-title">Practical software and web systems for real business needs.</h2>
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Recent work</p>
+            <h2 id="work-title">A handful of projects, each with its own kind of problem.</h2>
+          </div>
+          <p class="section-lede">
+            Four projects from the last three years. Different domains,
+            different stacks — the common thread is figuring out what the
+            actual problem was before writing any code.
+          </p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card">
+          <article class="project-card" data-reveal>
             <div class="project-meta">
-              <span>Healthcare</span>
-              <span>Web System</span>
+              <span>Healthcare &middot; 2025 — in progress</span>
+              <span>Python &middot; DuckDB</span>
             </div>
-            <h3>Tuya PA</h3>
-            <p>
-              A patient-facing site with location pages, forms, privacy pages,
-              and bilingual content paths that reduce avoidable phone calls.
+            <h3>Tuya Analytics</h3>
+            <p class="project-problem">
+              A primary-care clinic needed a weekly list of the patients most
+              at-risk of falling through the cracks — and a way to justify
+              every name on it to clinicians.
             </p>
-            <div class="business-win">
-              <span>Business win</span>
-              <strong>Patients can find the right office information and documents faster.</strong>
-            </div>
+            <p>
+              A local Python + DuckDB tool that ingests Practice Fusion Bulk
+              FHIR exports and weekly appointment reports, then runs a
+              configurable rubric scoring engine over the patient panel.
+              Versioned runs, component-level audit trails, and a CLI that
+              can diff a new scoring rubric against the previous one before
+              it ever touches the UI.
+            </p>
+            <ul class="project-bullets">
+              <li>FHIR Bulk ingest into a single-file DuckDB warehouse</li>
+              <li>YAML-driven rubric with per-component score explanations</li>
+              <li>v1/v2 engines run in parallel for safe migrations</li>
+              <li>All local — PHI never leaves the laptop</li>
+            </ul>
+            <p class="project-outcome">
+              The clinic gets a defensible worklist every Monday morning.
+            </p>
           </article>
 
-          <article class="project-card accent">
+          <article class="project-card accent" data-reveal>
             <div class="project-meta">
-              <span>Local Commerce</span>
-              <span>Service Flow</span>
+              <span>LLM systems &middot; 2023</span>
+              <span>Capstone</span>
             </div>
-            <h3>Taxi Wine</h3>
-            <p>
-              A polished digital foundation for a wine delivery business, built
-              around trust, service clarity, and customer action.
+            <h3>Gompai <span class="project-domain">github / capstone</span></h3>
+            <p class="project-problem">
+              Senior CS capstone: an AI chatbot robot with visual recognition
+              and per-person memory. The interesting problem wasn't the
+              hardware — it was designing the brain.
             </p>
-            <div class="business-win">
-              <span>Business win</span>
-              <strong>Visitors understand the offer quickly and know exactly what to do next.</strong>
-            </div>
+            <p>
+              We split the agent into two cooperating models — a fast one for
+              reactive speech and a slower one for deliberation — and built a
+              semantic-meaning memory store that the slow model retrieved
+              from before generating. Patterns that are standard in
+              production LLM stacks today; in 2023 we were sketching them
+              from first principles.
+            </p>
+            <ul class="project-bullets">
+              <li>Dual-model brain: reactive speech &amp; slower thought</li>
+              <li>Embedding-based memory + retrieval before generation</li>
+              <li>Computer-vision module for face / person recognition</li>
+              <li>Persistent identity for the robot across conversations</li>
+            </ul>
+            <p class="project-outcome">
+              The first time I had to design a system before the off-the-shelf
+              abstractions for it existed.
+            </p>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-reveal>
             <div class="project-meta">
-              <span>Operations</span>
-              <span>Internal Tools</span>
+              <span>Healthcare &middot; 2025</span>
+              <span>EN / ES &middot; hand-written</span>
             </div>
-            <h3>Admin Helpers</h3>
-            <p>
-              Small systems that clean up requests, reduce copy-paste work, and
-              make follow-up easier for busy teams.
+            <h3>Tuya PA <span class="project-domain">tuyamedical.com</span></h3>
+            <p class="project-problem">
+              The clinic's front desk was fielding constant calls for things
+              that should have been on the website — hours, addresses, intake
+              forms, what insurance they accept. The old BootstrapMade site
+              wasn't helping.
             </p>
-            <div class="business-win">
-              <span>Business win</span>
-              <strong>Teams spend less time sorting information and more time serving customers.</strong>
+            <p>
+              Full rewrite into hand-written HTML and CSS, no build step and
+              no dependencies. Bilingual EN/ES mirror with proper
+              <code>hreflang</code>, a Patient Fusion OAuth callback, public
+              JWKS, downloadable PDFs, and a sitemap. The whole site fits in
+              one folder a non-engineer could edit.
+            </p>
+            <ul class="project-bullets">
+              <li>Zero npm dependencies, zero build step</li>
+              <li>OAuth callback + JWKS for clinical integrations</li>
+              <li>Properly localized alternates and JSON-LD per language</li>
+            </ul>
+            <p class="project-outcome">
+              Patients self-serve hours, locations, and forms — fewer calls
+              for the front desk.
+            </p>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-meta">
+              <span>Hospitality &middot; 2025</span>
+              <span>EN / ES / PT &middot; Astro 5</span>
             </div>
+            <h3>Taxi Wine <span class="project-domain">Mendoza, AR</span></h3>
+            <p class="project-problem">
+              A single-driver private wine tour needed a credible web
+              presence that worked in three languages and routed serious
+              inquiries straight to a phone — without paying a booking
+              platform a cut of every trip.
+            </p>
+            <p>
+              A trilingual marketing site in Astro 5 + Tailwind v4. One
+              typed config file drives services, routes, FAQs, and the
+              per-language JSON-LD. A floating WhatsApp action turns interest
+              into an actual conversation in one tap.
+            </p>
+            <ul class="project-bullets">
+              <li>Three localized routes with proper <code>hreflang</code> alternates</li>
+              <li>Single <code>site.config.ts</code> owns 99% of the content</li>
+              <li>No third-party booking widget, no platform fees</li>
+            </ul>
+            <p class="project-outcome">
+              Visitors land in their own language and book a tour directly
+              with the driver.
+            </p>
           </article>
         </div>
       </section>
 
-      <section class="section process-section" id="process" aria-labelledby="process-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">How It Works</p>
-          <h2 id="process-title">A software process that stays understandable.</h2>
+      <section class="section approach-section" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">How I work</p>
+            <h2 id="approach-title">Figure out the right thing first. Build it second.</h2>
+          </div>
+          <p class="section-lede">
+            Most of the value isn't in the code. It's in the conversation
+            that decides what the code should do. These four principles
+            cover almost every project I take on.
+          </p>
         </div>
 
-        <div class="process-list">
-          <article>
-            <span>01</span>
-            <h3>Map the real workflow</h3>
-            <p>We identify where time, information, or decisions are getting stuck.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Design the smallest useful system</h3>
-            <p>I turn the goal into clear screens, data flow, logic, and launch steps.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Build, test, and hand off</h3>
-            <p>You get working software, plain-language notes, and a system that can grow.</p>
-          </article>
+        <ol class="approach-list">
+          <li data-reveal>
+            <span class="card-index">01</span>
+            <h3>The brief is rarely the problem</h3>
+            <p>
+              The first version of any project description is what the client
+              thinks they want. The real job is figuring out, with them, what
+              they actually need — and how those two things differ.
+            </p>
+          </li>
+          <li data-reveal>
+            <span class="card-index">02</span>
+            <h3>Design before code</h3>
+            <p>
+              I write the plan in plain language before I write the system.
+              You see the architecture, the data flow, and the trade-offs in
+              a doc you can argue with — long before I commit to building it.
+            </p>
+          </li>
+          <li data-reveal>
+            <span class="card-index">03</span>
+            <h3>Smallest useful version, on a real deadline</h3>
+            <p>
+              I'd rather ship the simplest thing that solves the actual
+              problem this month than the elegant thing that ships next
+              quarter. The elegant version comes later, once the simple one
+              is teaching us what to build.
+            </p>
+          </li>
+          <li data-reveal>
+            <span class="card-index">04</span>
+            <h3>Built so someone else can maintain it</h3>
+            <p>
+              Hand-written, documented, dependency-light. The team I'm
+              working with — or the next engineer who shows up — should be
+              able to read the code and the docs together and figure out why
+              every decision was made.
+            </p>
+          </li>
+        </ol>
+
+        <div class="numbers-strip" data-reveal aria-label="Recent numbers">
+          <div>
+            <strong>4</strong>
+            <small>projects across web, data, and LLM systems</small>
+          </div>
+          <div>
+            <strong>3</strong>
+            <small>languages shipped on a single marketing site</small>
+          </div>
+          <div>
+            <strong>0</strong>
+            <small>npm dependencies on tuyamedical.com</small>
+          </div>
+          <div>
+            <strong>&lt;90kB</strong>
+            <small>typical first-load page weight</small>
+          </div>
         </div>
       </section>
 
       <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">About Eduardo</p>
-          <h2 id="about-title">A software engineer who cares about the useful part.</h2>
+        <div class="section-heading compact" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Software engineer with a discovery habit.</h2>
         </div>
-        <div class="about-copy">
+        <div class="about-copy" data-reveal>
           <p>
-            My background is computer science and software engineering. I like
-            turning ambiguous problems into systems: data models, user flows,
-            reliable logic, clean interfaces, and maintainable code.
+            My background is computer science. I spend my days roughly evenly
+            split between two activities: sitting with someone whose work I
+            don't understand yet, and turning what I learn into a system that
+            does something specific and useful.
           </p>
           <p>
-            The goal is not to bury clients in technical choices. The goal is
-            software that solves the right problem, works smoothly on launch day,
-            and is still understandable after the excitement wears off.
+            That balance is the whole job, for me. The code is the easy part.
+            Figuring out what code to write — without burying the client in
+            options, without missing the constraint nobody mentioned — is the
+            part I find genuinely interesting.
           </p>
+          <p>
+            I'm open to client work, embedded engagements, and the right
+            full-time role. If something on this page resonates, I'd rather
+            hear about a real problem than a polished pitch.
+          </p>
+          <p class="signature">— Eduardo</p>
         </div>
       </section>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <section class="contact-section" id="contact" aria-labelledby="contact-title" data-reveal>
         <div>
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Tell me what work you want software to make easier.</h2>
+          <h2 id="contact-title">Tell me what you're trying to figure out.</h2>
+          <p class="contact-lede">
+            A paragraph about the problem is more useful than a polished
+            brief. I'll usually write back the same day with the next
+            sensible question.
+          </p>
         </div>
         <div class="contact-actions">
           <a class="button primary" href="mailto:hello@eduardo.dev?subject=Project%20inquiry">
             <span>Email Eduardo</span>
             <span aria-hidden="true">&#8599;</span>
           </a>
-          <a class="button ghost" href="#proof">
-            <span>Review the Demo</span>
-            <span aria-hidden="true">&#8593;</span>
+          <a class="button ghost" href="https://github.com/eduardopy" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <span aria-hidden="true">&#8599;</span>
           </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span data-year></span> Eduardo. Software for useful outcomes.</p>
-      <a href="#top">Back to top</a>
+      <p>&copy; <span data-year></span> Eduardo. Discovery and delivery.</p>
+      <div class="footer-links">
+        <a href="https://github.com/eduardopy" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@eduardo.dev">Email</a>
+        <a href="#top">Back to top</a>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
